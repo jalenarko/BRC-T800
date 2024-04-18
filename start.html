@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>T-800</title>
+    <link rel="stylesheet" href="start.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="start.js"></script>
+  </head>
+  <body>
+    <div class="left-container">
+      <!-- Container -->
+      <div class="button-container">
+        </button>
+        <!-- Start button -->
+        <button class="glowing-btn1" onclick="window.location.href='opened.html'">
+          <span class="glowing-txt">
+            S<span class="faulty-letter">T</span>ART
+          </span>
+        </button>
+        <!--Setting button -->
+
+        <a href="settings.html">
+        <button class="glowing-btn2">
+          <span class="glowing-txt"
+            ><i style="font-size:124px" class="fa">&#xf013;</i><span class="faulty-letter"></span></span
+          >
+        <style>
+          @import url("https://fonts.googleapis.com/css?family=Raleway");
+
+          :root {
+            --glow-color: hsl(186 100% 69%);
+          }
+
+          *,
+          *::before,
+          *::after {
+            box-sizing: border-box;
+          }
+
+          html,
+          body {
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+          }
+
+          body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: black;
+          }
+
+          .glowing-btn1 {
+            position: relative;
+            color: var(--glow-color);
+            cursor: pointer;
+            padding: 0.35em 1em;
+            border: 0.22em solid var(--glow-color);
+            border-radius: 0.45em;
+            background: none;
+            perspective: 2em;
+            font-family: "Raleway", sans-serif;
+            font-size: 4em;
+            font-weight: 900;
+            letter-spacing: 1em;
+            height: 250px;
+
+            
+          }
+
+          .glowing-btn2 {
+            position: relative;
+            color: var(--glow-color);
+            cursor: pointer;
+            padding: 0.35em 1em;
+            border: 0.15em solid var(--glow-color);
+            border-radius: 0.45em;
+            background: none;
+            perspective: 2em;
+            font-family: "Raleway", sans-serif;
+            font-size: 2em;
+            font-weight: 900;
+            letter-spacing: 1em;
+            height: 150px;
+
+          }
+
+          .glowing-txt {
+            float: left;
+            margin-right: -0.8em;
+            -webkit-text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3),
+              0 0 0.45em var(--glow-color);
+            -moz-text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3),
+              0 0 0.45em var(--glow-color);
+            text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3),
+              0 0 0.45em var(--glow-color);
+            animation: text-flicker 5s linear infinite;
+            text-align: center;
+          }
+
+          .faulty-letter {
+            opacity: 0.5;
+            animation: faulty-flicker 3s linear infinite;
+          }
+
+          .glowing-btn1::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            opacity: 0;
+            filter: blur(1em);
+            transform: translateY(120%) rotateX(95deg) scale(1, 0.35);
+            background: var(--glow-color);
+            pointer-events: none;
+          }
+
+          .glowing-btn2::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            opacity: 0;
+            filter: blur(1em);
+            transform: translateY(120%) rotateX(95deg) scale(1, 0.35);
+            background: var(--glow-color);
+            pointer-events: none;
+          }
+
+          .glowing-btn1::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            opacity: 0;
+            z-index: -1;
+            background-color: var(--glow-color);
+            box-shadow: 0 0 2em 0.2em var(--glow-color);
+            transition: opacity 100ms linear;
+          }
+
+          .glowing-btn2::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            opacity: 0;
+            z-index: -1;
+            background-color: var(--glow-color);
+            box-shadow: 0 0 2em 0.2em var(--glow-color);
+            transition: opacity 100ms linear;
+          }
+
+          .glowing-btn1:hover {
+            color: rgba(0, 0, 0, 0.8);
+            text-shadow: none;
+            animation: none;
+          }
+          
+          .glowing-btn2:hover {
+            color: rgba(0, 0, 0, 0.8);
+            text-shadow: none;
+            animation: none;
+          }
+
+          .glowing-btn1:hover .glowing-txt {
+            animation: none;
+          }
+
+          .glowing-btn2:hover .glowing-txt {
+            animation: none;
+          }
+
+          .glowing-btn1:hover .faulty-letter {
+            animation: none;
+            text-shadow: none;
+            opacity: 1;
+          }
+
+          .glowing-btn2:hover .faulty-letter {
+            animation: none;
+            text-shadow: none;
+            opacity: 1;}
+
+          .glowing-btn1:hover:before {
+            filter: blur(1.5em);
+            opacity: 1;
+          }
+
+          .glowing-btn2:hover:before {
+            filter: blur(1.5em);
+            opacity: 1;
+          }
+
+          .glowing-btn1:hover:after {
+            opacity: 1;
+          }
+
+          .glowing-btn2:hover:after {
+            opacity: 1;
+          }
+
+          @keyframes faulty-flicker {
+            0% {
+              opacity: 0.1;
+            }
+            2% {
+              opacity: 0.1;
+            }
+            4% {
+              opacity: 0.5;
+            }
+            19% {
+              opacity: 0.5;
+            }
+            21% {
+              opacity: 0.1;
+            }
+            23% {
+              opacity: 1;
+            }
+            80% {
+              opacity: 0.5;
+            }
+            83% {
+              opacity: 0.4;
+            }
+
+            87% {
+              opacity: 1;
+            }
+          }
+
+          @keyframes text-flicker {
+            0% {
+              opacity: 0.1;
+            }
+
+            2% {
+              opacity: 1;
+            }
+
+            8% {
+              opacity: 0.1;
+            }
+
+            9% {
+              opacity: 1;
+            }
+
+            12% {
+              opacity: 0.1;
+            }
+            20% {
+              opacity: 1;
+            }
+            25% {
+              opacity: 0.3;
+            }
+            30% {
+              opacity: 1;
+            }
+
+            70% {
+              opacity: 0.7;
+            }
+            72% {
+              opacity: 0.2;
+            }
+
+            77% {
+              opacity: 0.9;
+            }
+            100% {
+              opacity: 0.9;
+            }
+          }
+
+          @keyframes border-flicker {
+            0% {
+              opacity: 0.1;
+            }
+            2% {
+              opacity: 1;
+            }
+            4% {
+              opacity: 0.1;
+            }
+
+            8% {
+              opacity: 1;
+            }
+            70% {
+              opacity: 0.7;
+            }
+            100% {
+              opacity: 1;
+            }
+          }
+
+          @media only screen and (max-width: 2560) {
+            .glowing-btn1 and .glowing-btn2{
+              font-size: 1em;
+            }
+          }
+        </style>
+      </div>
+    </div>
+    <div class="right-container">
+      <!-- FILEPATH: /Users/jalenarko/Desktop/T-800 /test/start.html -->
+      <div id="clock" class="clock"></div>
+
+      <script>
+        // Get the clock element
+        const clock = document.getElementById("clock");
+
+        // Function to update the clock
+        function updateClock() {
+          // Get the current time
+          const now = new Date();
+
+          // Format the time as HH:MM:SS
+          const hours = String(now.getHours()).padStart(2, "0");
+          const minutes = String(now.getMinutes()).padStart(2, "0");
+          const seconds = String(now.getSeconds()).padStart(2, "0");
+          const time = `${hours}:${minutes}:${seconds}`;
+
+          // Update the clock element with the current time
+          clock.textContent = time;
+        }
+
+        // Update the clock immediately
+        updateClock();
+
+        // Update the clock every second
+        setInterval(updateClock, 1000);
+      </script>
+      <!-- Image goes here -->
+      <img
+        src="Bio-ReCell_Main_White.png"
+        alt="Bio-ReCell_Main_White"
+        class="right-image"
+      />
+    </div>
+  </body>
+</html>

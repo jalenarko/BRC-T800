@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>T-800 HMI</title>
+    <script type="text/javascript" src="/eel.js"></script>
+    <link rel="stylesheet" type="text/css" href="test.css" />
+  </head>
+  <body>
+    <!-- 
+    <div class="manual-operation"><b>VALVE AND PUMP CONTROL:</b></div> -->
+
+    <!-- Toggle buttons -->
+    <!-- <div>
+      <button id="button0" class="inactive" onclick="toggleButton(0)">
+        Valve 1
+      </button>
+      <button id="button1" class="inactive" onclick="toggleButton(1)">
+        Valve 2
+      </button>
+      <button id="button2" class="inactive" onclick="toggleButton(2)">
+        Valve 3
+      </button>
+      <button id="button3" class="inactive" onclick="toggleButton(3)">
+        Valve 4
+      </button>
+      <button id="button4" class="inactive" onclick="toggleButton(4)">
+        Valve 5
+      </button>
+      <button id="button5" class="inactive" onclick="toggleButton(5)">
+        Valve 6
+      </button>
+    </div> -->
+
+    <!-- Sliders -->
+    <!-- <div>
+      Pump 1(0-100%):
+      <input
+        type="range"
+        min="0"
+        max="100"
+        value="0"
+        oninput="updateSlider(0, this.value)"
+        style="width: 300px"
+      />
+      <button id="reverse0" class="inactive">Rev</button><br />
+      Pump 2(0-100%):
+      <input
+        type="range"
+        min="0"
+        max="100"
+        value="0"
+        onchange="updateSlider(1, this.value)"
+        style="width: 300px"
+      />
+      <button id="reverse1" class="inactive">Rev</button><br />
+    </div> -->
+
+    <!-- Door buttons -->
+    <div class="door-strip-control">
+      DOOR AND STRIP CONTROL:<br />
+      <div class="speed-label">Speed(0-100%):</div>
+    </div>
+    <input
+      type="range"
+      min="0"
+      max="90"
+      value="0"
+      oninput="set_door_speed(this.value)"
+      class="element"
+      style="width: 400px"
+    />
+    <div class="door-buttons-row">
+      <button id="open" class="element" onclick="set_door_open()">OPEN</button>
+      <button id="close" class="element" onclick="set_door_close()">
+        CLOSE
+      </button>
+    </div>
+    <div class="door-buttons-row">
+      <button id="stop" class="element" onclick="set_door_stop()">STOP</button>
+      <button id="open_p" class="element" onclick="set_door_open_puls()">
+        Open step
+      </button>
+      <button id="close_p" class="element" onclick="set_door_close_puls()">
+        Close step
+      </button>
+    </div>
+    <!-- 
+      <div class="switch-container">
+        Switch 1: <span id="led1Indicator" class="element">Off</span> Switch 2:
+        <span id="led2Indicator" class="element">Off</span>
+      </div>
+    </div>  -->
+
+    <!-- LED strip -->
+    <div>
+      Strip:
+      <input
+        type="color"
+        id="colorPicker"
+        name="colorPicker"
+        style="width: 150px"
+      /><br />
+      <!-- Increased width -->
+    </div>
+    <script>
+      function toggleButton(index) {
+        eel.toggle_button(index)(function (result) {
+          console.log("Button " + index + " state:", result);
+        });
+      }
+
+      function updateSlider(index, value) {
+        eel.set_slider_value(index, value);
+      }
+
+      function set_door_speed(value) {
+        eel.set_door_speed(value);
+      }
+
+      function set_door_open() {
+        eel.set_door_open();
+      }
+
+      function set_door_close() {
+        eel.set_door_close();
+      }
+
+      function set_door_stop() {
+        eel.set_door_stop();
+      }
+
+      function set_door_close_puls() {
+        eel.set_door_close_puls();
+      }
+
+      function set_door_open_puls() {
+        eel.set_door_open_puls();
+      }
+
+      eel.expose(setLed);
+
+      function setLed(index, state) {
+        document.getElementById("led" + (index + 1) + "Indicator").innerText =
+          state ? "On" : "Off";
+      }
+
+      eel.expose(set_button_color);
+      function set_button_color(buttonIndex, value) {
+        var button = document.getElementById("button" + buttonIndex);
+        if (value) {
+          button.classList.remove("inactive");
+          button.classList.add("active");
+        } else {
+          button.classList.remove("active");
+          button.classList.add("inactive");
+        }
+      }
+    </script>
+  </body>
+</html>

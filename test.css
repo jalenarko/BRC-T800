@@ -1,0 +1,139 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #000000; /* Black background */
+  color: #ffffff; /* White text */
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+  background-color: #007bff;
+  color: white;
+  border-radius: 10%; /* Make the button circular */
+  margin: 30px; /* Increased margin for more space between buttons */
+  transition: background-color 0.3s ease;
+  width: 130px; /* Increased width to make the button more squared */
+  height: 130px; /* Increased height to make the button more squared */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button:hover {
+  background-color: #0056b3; /* Blue background */
+  color: white;
+  border-radius: 10%;
+  margin: 10px;
+  transition: background-color 0.5s ease;
+}
+
+button.active {
+  background-color: #002ead; /* Lighter grey background for active buttons */
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+  width: 400px; /* Increased width */
+  height: 200px; /* Increased height */
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 30px; /* Increased width */
+  height: 30px; /* Increased height */
+  background: #4caf50;
+  cursor: pointer;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+  height: 100px;
+  background: #ddd;
+  border: none;
+  border-radius: 3px;
+}
+
+input[type="range"]::-moz-range-thumb {
+  width: 30px; /* Increased width */
+  height: 30px; /* Increased height */
+  background: #4caf50;
+  cursor: pointer;
+}
+
+input[type="range"]::-moz-range-track {
+  height: 10px;
+  background: #ddd;
+  border: none;
+  border-radius: 3px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 400px; /* Adjust the maximum width to fit the 400x1200 resolution */
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column; /* Adjust based on your layout */
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  width: 100%;
+  max-width: 400px;
+}
+
+/* Example for centering text */
+.center-text {
+  text-align: center;
+  font-size: 16px; /* Adjusted font size for better readability */
+}
+
+.door-buttons-row {
+  display: flex;
+  justify-content: space-between;
+  width: 100%; /* Ensure the container takes full width */
+  margin-bottom: 15px; /* Increased margin-bottom */
+}
+
+.door-buttons-row button {
+  flex: 1 0 auto; /* This ensures each button takes up equal space within the row */
+  margin: 10px; /* Increased margin */
+}
+
+.switch-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%; /* Ensure the container takes full width */
+  margin-bottom: 15px; /* Add some space below the switches */
+}
+
+.door-strip-control {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 400px; /* Adjust the maximum width to fit the 400x1200 resolution */
+}
+
+.speed-label {
+  text-align: center;
+  font-size: 16px; /* Adjusted font size for better readability */
+}
