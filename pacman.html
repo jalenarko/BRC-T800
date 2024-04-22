@@ -26,14 +26,16 @@ body {
   display: flex;
   align-items: center;
   overflow: hidden;
-  height: 50vh;
-  width: 50%;
+  height: 400px;
+  width: 1280px;
+
 }
 
 .pacman {
   position: absolute;
   background: transparent;
   z-index: 1;
+  
 }
 .pacman::before, .pacman::after {
   position: absolute;
@@ -69,8 +71,8 @@ body {
     background-repeat: no-repeat;
     border-radius: 50%;
     content: "";
-    height: 2rem;
-    width: 2rem;
+    height: 3rem;
+    width: 3rem;
 }
 
 @keyframes chunk-top {
