@@ -1,13 +1,10 @@
 <!DOCTYPE html>
-<html lang="en" >
-
-<head>
-  <meta charset="UTF-8">
-<meta name="Pacman" content="Pacman">
-  <title>Pacman</title>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>T-800</title>
   <style>@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
-  .bmc{position:fixed;top:0;padding:16px}
-  .bmc-par>.bmc-button{margin-left:.5rem}
   </style>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
 
@@ -18,8 +15,9 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #000000;
+  background: #000;
   height: 100vh;
+  gap: 120px;
 }
 
 .container {
@@ -130,7 +128,104 @@ body {
     }
  </script>
 </aside>
+
+<div class="right-container">
+  <!-- FILEPATH: /Users/jalenarko/Desktop/T-800 /test/start.html -->
+  <div id="clock" class="clock"></div>
+  <style>
+  .right-container {
+  position: relative; /* This makes the container a positioning context for absolutely positioned children */
+  display: flex;
+  justify-content: center; /* Centers content horizontally */
+  align-items: center; /* Centers content vertically */
+  width: 1280px; /* Width of each display */
+  height: 400px; /* Height of each display */
+}
+
+.right-image {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto; /* Centers the image */
+  max-width: 100%; /* Ensures the image does not exceed the container's width */
+  max-height: 100%; /* Ensures the image does not exceed the container's height */
+  width: auto;
+  height: auto;
+  object-fit: contain; /* Ensures the entire image is visible */
+}
+
+.clock {
+  /* Positioning styles */
+  font-size: 30px; /* Adjust the font size as needed */
+  color: #ffffff; /* Adjust the text color as needed */
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-right: 40px;
+  /* Other styles */
+}
+
+  </style>
+
+  <script>
+    // Get the clock element
+    const clock = document.getElementById("clock");
+
+    // Function to update the clock
+    function updateClock() {
+      // Get the current time
+      const now = new Date();
+
+      // Format the time as HH:MM:SS
+      const hours = String(now.getHours()).padStart(2, "0");
+      const minutes = String(now.getMinutes()).padStart(2, "0");
+      const seconds = String(now.getSeconds()).padStart(2, "0");
+      const time = `${hours}:${minutes}:${seconds}`;
+
+      // Update the clock element with the current time
+      clock.textContent = time;
+    }
+
+    // Update the clock immediately
+    updateClock();
+
+    // Update the clock every second
+    setInterval(updateClock, 1000);
+  </script>
+  <!-- Image goes here -->
+  <!-- FILEPATH: /Users/jalenarko/Desktop/T-800 /test/start.html -->
+  <!-- BEGIN: ed8c6549bwf9 -->
+  <!-- FILEPATH: /Users/jalenarko/Desktop/T-800 /test/start.html -->
+  <!-- BEGIN: ed8c6549bwf9 -->
+  <img
+    src="Bio-ReCell_Main_White.png"
+    alt="Bio-ReCell_Main_White"
+    class="right-image animated"
+  />
   
+  <style>
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+        transform: scale(0.5);
+      }
+      
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    .container,
+    .right-container {
+      animation: fadeIn 1.2s ease-in-out;
+    }
+
+
+    
+  </style>
   
   
 </body>

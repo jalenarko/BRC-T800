@@ -198,5 +198,26 @@
         class="right-image"
       />
     </div>
+    <style>
+      @keyframes fadeIn {
+        0% {
+          opacity: 0;
+          transform: scale(0.5);
+        }
+        
+        100% {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+      
+      .button-container,
+      .right-container {
+        animation: fadeIn 1.2s ease-in-out;
+      }
+
+
+      
+    </style>
   </body>
 </html>

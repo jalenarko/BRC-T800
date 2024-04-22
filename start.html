@@ -11,9 +11,31 @@
     />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="start.js"></script>
+    <style>
+        @keyframes fadeIn {
+          0% {
+            opacity: 0;
+            transform: scale(0.5);
+          }
+          
+          100% {
+            opacity: 1;
+            transform: scale(1);
+          }
+        }
+
+        .left-container,
+        .button-container,
+        .right-container {
+          animation: fadeIn 1.2s ease-in-out;
+        }
+
+
+        
+      </style>
   </head>
   <body>
-    <div class="left-container">
+    <div class="left-container" id="left-container">
       <!-- Container -->
       <div class="button-container">
         </button>
@@ -30,7 +52,10 @@
           <span class="glowing-txt"
             ><i style="font-size:124px" class="fa">&#xf013;</i><span class="faulty-letter"></span></span
           >
+          
         <style>
+      
+
           @import url("https://fonts.googleapis.com/css?family=Raleway");
 
           :root {
@@ -366,26 +391,4 @@
         alt="Bio-ReCell_Main_White"
         class="right-image animated"
       />
-      <!-- END: ed8c6549bwf9 -->
-
-      <style>
-        .right-image {
-          transition: .5s;
-        }
-      </style>
-              <!-- END: ed8c6549bwf9 -->
-
-              
-              </style>
-            </div>
-          </body>
-        </html>
-      />
-      <!-- END: ed8c6549bwf9 -->
-
-      <style>
-       
-      </style>
-    </div>
-  </body>
-</html>
+      
