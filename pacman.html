@@ -33,11 +33,11 @@ body {
   position: absolute;
   background: transparent;
   z-index: 1;
-  
+  margin-left: -20px;
 }
 .pacman::before, .pacman::after {
   position: absolute;
-  top: -40px;
+  top: -70px;
   display: block;
   border-radius: 50%;
   content: "";
@@ -46,13 +46,13 @@ body {
 }
 .pacman::before {
   animation: chunk-top 0.75s ease infinite;
-  border: 40px solid #f37027;
+  border: 70px solid #f37027;
   border-left-color: transparent;
   border-bottom-color: transparent;
 }
 .pacman::after {
   animation: chunk-bottom 0.75s ease infinite;
-  border: 40px solid #f37027;
+  border: 70px solid #f37027;
   border-right-color: transparent;
   border-top-color: transparent;
 }
@@ -69,8 +69,8 @@ body {
     background-repeat: no-repeat;
     border-radius: 50%;
     content: "";
-    height: 3rem;
-    width: 3rem;
+    height: 5rem;
+    width: 5rem;
 }
 
 @keyframes chunk-top {
